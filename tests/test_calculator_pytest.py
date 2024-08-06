@@ -13,7 +13,6 @@ def test_no_signs():
 def test_two_signs():
     with pytest.raises(ValueError) as error:
         calculator('2+2+2')
-        print(f'error.value.args: {error.value.args}')
         assert 'Выражение должно содержать 2 целых числа и 1 знак' == error.value.args[0]
 
 if __name__ == '__main__':
